@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent PNG Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Transparent PNG Generator</h1>
+        </header>
+
+        <div class="card">
+            <h2 class="section-title">Quick Presets</h2>
+            <div class="presets" role="group" aria-label="Aspect ratio presets">
+                <button class="preset-btn" data-ratio="16:9" data-width="1920" data-height="1080">16:9</button>
+                <button class="preset-btn" data-ratio="4:3" data-width="1600" data-height="1200">4:3</button>
+                <button class="preset-btn" data-ratio="1:1" data-width="1024" data-height="1024">1:1</button>
+                <button class="preset-btn" data-ratio="9:16" data-width="1080" data-height="1920">9:16</button>
+                <button class="preset-btn" data-ratio="21:9" data-width="2560" data-height="1080">21:9</button>
+                <button class="preset-btn" data-ratio="3:2" data-width="1500" data-height="1000">3:2</button>
+            </div>
+
+            <h2 class="section-title">Custom Dimensions</h2>
+            <div class="dimensions-input">
+                <div class="input-group">
+                    <label for="width">Width</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="width" min="1" max="8192" value="1920" aria-describedby="width-error">
+                        <span class="input-suffix">px</span>
+                    </div>
+                    <div class="error-message" id="width-error" aria-live="polite"></div>
+                </div>
+                <span class="dimension-separator">×</span>
+                <div class="input-group">
+                    <label for="height">Height</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="height" min="1" max="8192" value="1080" aria-describedby="height-error">
+                        <span class="input-suffix">px</span>
+                    </div>
+                    <div class="error-message" id="height-error" aria-live="polite"></div>
+                </div>
+            </div>
+            <label class="lock-ratio">
+                <input type="checkbox" id="lockRatio">
+                Lock aspect ratio
+            </label>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Preview</h2>
+            <div class="preview-container">
+                <div class="preview-wrapper">
+                    <div class="preview-canvas" id="previewCanvas">
+                        <span class="preview-dimensions" id="previewDimensions">1920 × 1080</span>
+                    </div>
+                </div>
+                <p class="preview-info">
+                    Estimated file size: <span class="file-size" id="fileSize">~8 KB</span>
+                </p>
+            </div>
+        </div>
+
+        <button class="download-btn" id="downloadBtn" aria-label="Download transparent PNG">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download PNG
+        </button>
+        <div class="filename-preview" id="filenamePreview">transparent_1920x1080.png</div>
+    </div>
+
+    <footer>
+        <p>Files are generated locally in your browser. No data is uploaded.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    </script>
+</body>
+</html>
