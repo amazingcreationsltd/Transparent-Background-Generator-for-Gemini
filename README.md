@@ -67,12 +67,7 @@ No frameworks. No libraries. Completely client-side.
 
 ---
 
-## 📂 Project Structure
 
-📁 Transparent-PNG-Generator
-├── index.html — UI layout, preset buttons, preview container
-├── style.css — Styling, responsive design, checkerboard preview background
-└── script.js — Logic for validation, preview scaling, PNG generation
 
 ## 🧑‍💻 How It Works
 
